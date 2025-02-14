@@ -3,6 +3,7 @@ import "./globals.css";
 import MouseMoveEffect from "@/components/Mouse_move_effect";
 import AppFooter from "@/components/nav/AppFooter";
 import AppNavbar from "@/components/nav/AppNavbar";
+import CircularText from "@/components/bits/CircularText";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${montserrat.variable} } antialiased`}>
         {/* <MouseMoveEffect /> */}
+
         <AppNavbar />
         {children}
         <AppFooter />

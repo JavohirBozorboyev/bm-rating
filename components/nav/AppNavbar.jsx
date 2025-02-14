@@ -44,7 +44,7 @@ const AppNavbar = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="bg-gradient-to-tr from-blue-400 to-pink-300 px-4 py-2 text-white capitalize rounded-lg hover:scale-95 duration-300">get started</button>
+              <button className="bg-gradient-to-tr from-slate-600 to-cyan-950 px-4 py-2 text-white capitalize rounded-lg hover:scale-95 duration-300">get started</button>
             </div>
           </div>
         </div>

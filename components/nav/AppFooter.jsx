@@ -60,18 +60,18 @@ const AppFooter = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4">
-              {/* <Link href="#" className="text-gray-400 hover:text-white">
-                <Facebook className="h-6 w-6" />
+              <Link href="#" className="text-gray-400 hover:text-white">
+                Facebook
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Twitter className="h-6 w-6" />
+                Facebook
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Instagram className="h-6 w-6" />
+                Facebook
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white">
-                <Linkedin className="h-6 w-6" />
-              </Link> */}
+                Facebook
+              </Link>
             </div>
           </div>
         </div>
