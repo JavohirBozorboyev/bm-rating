@@ -1,39 +1,35 @@
 "use client";
+import BmLogo from "@/assets/BmLogo";
 import CircularText from "@/components/bits/CircularText";
 import CountUp from "@/components/bits/CountUp";
-import VariableProximity from "@/components/bits/VariableProximity";
-import AppNavbar from "@/components/nav/AppNavbar";
+import Magnet from "@/components/bits/Magnet";
 import PixelCard from "@/components/PixelCard";
 import ShinyText from "@/components/ShinyText";
-import SpotlightCard from "@/components/SpotlightCard";
 import { useRef } from "react";
 
 export default function Home() {
   const containerRef = useRef(null);
   return (
     <div className=" flex flex-col bg-black bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
-      <header className="h-[50vh] container px-4 mx-auto my-20 flex items-center justify-center">
-        <div className="flex items-center justify-center">
-          <h1 className="text-4xl text-white uppercase">Boborahim Mashrab</h1>
-          <div ref={containerRef} style={{ position: "relative" }}>
-            <VariableProximity
-              label={"Hover me! And then star React Bits on GitHub, or else..."}
-              className={"variable-proximity-demo"}
-              fromFontVariationSettings="'wght' 400, 'opsz' 9"
-              toFontVariationSettings="'wght' 1000, 'opsz' 40"
-              containerRef={containerRef}
-              radius={100}
-              falloff="linear"
+      <header className=" container px-4 mx-auto py-24 flex flex-col justify-center items-center gap-10 ">
+        <div className="col-span-5 flex justify-end">
+          <Magnet padding={800} disabled={false} magnetStrength={50}>
+            <BmLogo
+              className={"w-[300px] h-[300px] drop-shadow-2xl   fill-white  "}
             />
-            <CircularText
-              text="REACT*BITS*COMPONENTS*"
-              onHover="speedUp"
-              spinDuration={20}
-              className="custom-class"
-            />
-          </div>
+          </Magnet>
+        </div>
+        <div className="flex  flex-col items-center col-span-7">
+          <h1 className="text-6xl text-white uppercase">Boborahim Mashrab</h1>
+          <p className="text-gray-200 text-xl mt-5 text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />{" "}
+            Quam expedita aspernatur eos fugiat molestiae animi, in dolor
+            corporis ea ut vel accusamus illum unde explicabo assumenda quod
+            nesciunt aliquam ex.
+          </p>
         </div>
       </header>
+      <div className="w-full h-[1px] bg-gray-500"></div>
       <div className="relative z-10">
         <div className=" relative flex justify-center items-center flex-col">
           <div className="container p-4 mx-auto flex items-center ">
@@ -111,6 +107,13 @@ export default function Home() {
           </article>
         </div>
       </div>
+      <div className="w-full h-[1px] bg-white"></div>
     </div>
   );
 }
+//  <CircularText
+//             text="REACT*BITS*COMPONENTS*"
+//             onHover="speedUp"
+//             spinDuration={20}
+//             className="custom-class"
+//           />
