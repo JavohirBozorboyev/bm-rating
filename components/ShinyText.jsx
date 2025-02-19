@@ -1,4 +1,9 @@
-const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
+const ShinyText = ({
+  disabled = false,
+  speed = 5,
+  className = "",
+  children,
+}) => {
   const animationDuration = `${speed}s`;
 
   return (
@@ -14,7 +19,7 @@ const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
         animationDuration: animationDuration,
       }}
     >
-      {text}
+      {children}
     </div>
   );
 };
