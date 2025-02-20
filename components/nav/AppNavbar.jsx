@@ -6,7 +6,7 @@ const AppNavbar = () => {
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
-        <div className="container mx-auto  flex  justify-between py-3">
+        <div className="container px-4 mx-auto  flex  justify-between py-3">
           <Link
             href="/"
             className="text-2xl font-bold bg-gradient-to-r from-primary  text-white flex items-center gap-2 cursor-pointer uppercase"

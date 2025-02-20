@@ -2,6 +2,7 @@ import MouseMoveEffect from "@/components/Mouse_move_effect";
 import "./globals.css";
 import AppFooter from "@/components/nav/AppFooter";
 import AppNavbar from "@/components/nav/AppNavbar";
+import useSWR, { SWRConfig } from "swr";
 
 export const metadata = {
   title: "Bm Rating",
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
 
         <AppNavbar />
         {children}
-        {/* <AppFooter /> */}
+        <AppFooter />
       </body>
     </html>
   );
