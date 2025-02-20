@@ -18,37 +18,27 @@ const AppNavbar = () => {
             <div className="hidden md:block ">
               <div className="flex items-center space-x-8">
                 <Link
-                  href="#"
+                  href="/"
                   className="text-sm text-gray-300 hover:text-white"
                 >
-                  Pricing
+                  Asosiy Sahifa
                 </Link>
                 <Link
-                  href="#"
+                  href="rating"
                   className="text-sm text-gray-300 hover:text-white"
                 >
-                  Resources
+                  Reyting
                 </Link>
                 <Link
-                  href="#"
+                  href="/#contact"
                   className="text-sm text-gray-300 hover:text-white"
                 >
-                  Community
-                </Link>
-                <Link
-                  href="#"
-                  className="text-sm text-gray-300 hover:text-white"
-                >
-                  Download
+                  Bog'laish
                 </Link>
               </div>
             </div>
           </div>
-          <div className="flex items-center space-x-4">
-            <button className="bg-gradient-to-tr from-slate-600 to-cyan-950 px-4 py-2 text-white capitalize rounded-lg hover:scale-95 duration-300">
-              get started
-            </button>
-          </div>
+          {/* <div className="flex items-center space-x-4"></div> */}
         </div>
       </nav>
     </div>

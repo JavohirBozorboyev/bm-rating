@@ -136,6 +136,7 @@ export default function PixelCard({
   speed,
   colors,
   noFocus,
+  alwaysAnimate = false, // Yangi prop qo‘shildi
   className = "",
   children,
 }) {
@@ -246,12 +247,18 @@ export default function PixelCard({
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
+
+    // Agar `alwaysAnimate` true bo‘lsa, doimiy animatsiyani ishga tushiramiz
+    if (alwaysAnimate) {
+      handleAnimation("appear");
+    }
+
     return () => {
       observer.disconnect();
       cancelAnimationFrame(animationRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [finalGap, finalSpeed, finalColors, finalNoFocus]);
+  }, [finalGap, finalSpeed, finalColors, finalNoFocus, alwaysAnimate]);
 
   return (
     <div

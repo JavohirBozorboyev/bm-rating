@@ -2,7 +2,7 @@ import MouseMoveEffect from "@/components/Mouse_move_effect";
 import "./globals.css";
 import AppFooter from "@/components/nav/AppFooter";
 import AppNavbar from "@/components/nav/AppNavbar";
-import useSWR, { SWRConfig } from "swr";
+import SWRProvider from "@/utils/SWRProvider";
 
 export const metadata = {
   title: "Bm Rating",
@@ -12,12 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` antialiased relative `}>
+      <body className="antialiased relative">
         <MouseMoveEffect />
-
-        <AppNavbar />
-        {children}
-        <AppFooter />
+        <SWRProvider>
+          {" "}
+          {/* SWRConfig ni Client Component ichiga joylashtiramiz */}
+          <AppNavbar />
+          {children}
+          <AppFooter />
+        </SWRProvider>
       </body>
     </html>
   );
