@@ -64,7 +64,7 @@ const MainRatingList = () => {
                   text="BEST*OF*THE*BEST*"
                   onHover="speedUp"
                   spinDuration={20}
-                  className="absolute top-10 right-10  z-20 w-40 h-40  text-lg"
+                  className="absolute top-0 right-5  z-20 w-40 h-40  text-lg"
                 />
               </article>
             </article>

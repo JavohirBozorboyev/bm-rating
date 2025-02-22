@@ -15,11 +15,9 @@ export default function RootLayout({ children }) {
       <body className="antialiased relative">
         <MouseMoveEffect />
         <SWRProvider>
-          {" "}
-          {/* SWRConfig ni Client Component ichiga joylashtiramiz */}
           <AppNavbar />
           {children}
-          <AppFooter />
+          {/* <AppFooter /> */}
         </SWRProvider>
       </body>
     </html>
