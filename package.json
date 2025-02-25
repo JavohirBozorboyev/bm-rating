@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-spring/web": "^9.7.5",
     "@tabler/icons-react": "^3.30.0",
+    "axios": "^1.7.9",
     "framer-motion": "^12.4.2",
     "next": "15.1.7",
     "ogl": "^1.0.11",

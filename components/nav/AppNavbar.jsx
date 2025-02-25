@@ -29,12 +29,6 @@ const AppNavbar = () => {
                 >
                   Reyting
                 </Link>
-                <Link
-                  href="/#contact"
-                  className="text-sm text-gray-300 hover:text-white"
-                >
-                  Bog'laish
-                </Link>
               </div>
             </div>
           </div>

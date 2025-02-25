@@ -27,9 +27,9 @@ const MainHero = () => {
               Boborahim Mashrab xususiy maktabi zamonaviy sharoitlar bilan
               ta'minlangan ixtisoslashtirilgan maktab bo'lib, 1-sinfdan
               11-sinfgacha bo'lgan o'quvchilar taxsil oladi. Ixtisoslik
-              yo'nalishlari matematika, informatika (I.T), ingliz tili, rus
-              tili, kimyo hamda biologiya fanlari bo'lib darslar o'zbek tilida
-              olib boriladi
+              yo'nalishlari Matematika, Informatika (I.T), Ingliz-tili,
+              Rus-tili, Kimyo hamda Biologiya fanlari bo'lib darslar o'zbek
+              tilida olib boriladi
             </p>
             <article className="flex justify-center lg:justify-start">
               <Link href={""}>
