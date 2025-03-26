@@ -24,10 +24,16 @@ const AppNavbar = () => {
                   Asosiy Sahifa
                 </Link>
                 <Link
-                  href="rating"
+                  href="/rating"
                   className="text-sm text-gray-300 hover:text-white"
                 >
                   Reyting
+                </Link>
+                <Link
+                  href="/math"
+                  className="text-sm text-gray-300 hover:text-white"
+                >
+                  Matematika Musobaqasi
                 </Link>
               </div>
             </div>
