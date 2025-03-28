@@ -38,19 +38,19 @@ const CountdownTimer = () => {
     <div className="flex gap-4 justify-center text-2xl  lg:text-4xl 2xl:text-5xl font-extrabold select-none">
       <div >
         <span className="text-white ">{timeLeft.days}</span>{" "}
-        <span className="text-gray-500 font-medium text-base lg:text-2xl">days</span>
+        <span className="text-gray-500 font-medium text-base lg:text-2xl">kun</span>
       </div>
       <div>
         <span className="text-white ">{timeLeft.hours}</span>{" "}
-        <span className="text-gray-500 font-medium text-base lg:text-2xl">hours</span>
+        <span className="text-gray-500 font-medium text-base lg:text-2xl">soat</span>
       </div>
       <div>
         <span className="text-white ">{timeLeft.minutes}</span>{" "}
-        <span className="text-gray-500 font-medium text-base lg:text-2xl">minutes</span>
+        <span className="text-gray-500 font-medium text-base lg:text-2xl">daqiqa</span>
       </div>
       <div>
         <span className="text-white ">{timeLeft.seconds}</span>{" "}
-        <span className="text-gray-500 font-medium text-base lg:text-2xl">sec</span>
+        <span className="text-gray-500 font-medium text-base lg:text-2xl">soniya</span>
       </div>
     </div>
   );
