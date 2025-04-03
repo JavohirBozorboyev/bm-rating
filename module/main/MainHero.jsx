@@ -73,7 +73,6 @@ const MainHero = () => {
               target="_blank"
             >
               <ShinyText
-                text="Instagram"
                 disabled={false}
                 speed={3}
                 className="custom-class flex items-center gap-2 b duration-200 fill-white text-xl"
@@ -84,7 +83,6 @@ const MainHero = () => {
             </Link>
             <Link href={"/"}>
               <ShinyText
-                text="Instagram"
                 disabled={false}
                 speed={3}
                 className="custom-class flex items-center gap-2 b duration-200 fill-white text-xl"
@@ -95,7 +93,6 @@ const MainHero = () => {
             </Link>
             <Link href={"/"}>
               <ShinyText
-                text="Instagram"
                 disabled={false}
                 speed={3}
                 className="custom-class flex items-center gap-2 b duration-200 fill-white text-xl"

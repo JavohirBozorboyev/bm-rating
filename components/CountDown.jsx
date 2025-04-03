@@ -35,7 +35,7 @@ const CountdownTimer = () => {
   }, []);
 
   return (
-    <div className="flex gap-4 justify-center text-2xl  lg:text-4xl 2xl:text-5xl font-extrabold select-none">
+    <div className="flex gap-4 lg:justify-center text-3xl mt-5  md:text-5xl 2xl:text-5xl font-extrabold select-none">
       <div >
         <span className="text-white ">{timeLeft.days}</span>{" "}
         <span className="text-gray-500 font-medium text-base lg:text-2xl">kun</span>
