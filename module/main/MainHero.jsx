@@ -33,7 +33,7 @@ const MainHero = () => {
             </article>
 
             <article
-              data-aos-duration="1500"
+              data-aos-duration="2500"
               data-aos="fade-down-right"
               className="z-20 relative"
             >
@@ -60,7 +60,11 @@ const MainHero = () => {
               tilida olib boriladi
             </p>
             <article className="flex justify-center lg:justify-start">
-              <Link href={""}>
+              <Link
+                href={""}
+                data-aos-duration="2000"
+                data-aos="fade-down-right"
+              >
                 <ShinyText className="  border border-gray-600 text-lg p-2 px-4 flex items-center gap-2 mt-8 hover:scale-105 duration-300">
                   Bog'lanish <IconArrowRight size={17} />
                 </ShinyText>
@@ -71,6 +75,8 @@ const MainHero = () => {
             <Link
               href={"https://www.instagram.com/boborahim_mashrab_maktabi/"}
               target="_blank"
+              data-aos-duration="2000"
+              data-aos="fade-up"
             >
               <ShinyText
                 disabled={false}
@@ -81,7 +87,7 @@ const MainHero = () => {
                 Instagram
               </ShinyText>
             </Link>
-            <Link href={"/"}>
+            {/* <Link href={"/"} target="_blank">
               <ShinyText
                 disabled={false}
                 speed={3}
@@ -90,8 +96,13 @@ const MainHero = () => {
                 <IconBrandFacebook size={30} color="#aaa" />
                 Facebook
               </ShinyText>
-            </Link>
-            <Link href={"/"}>
+            </Link> */}
+            <Link
+              data-aos-duration="2500"
+              data-aos="fade-up"
+              target="_blank"
+              href={"https://t.me/Boborahim_mashrab"}
+            >
               <ShinyText
                 disabled={false}
                 speed={3}
