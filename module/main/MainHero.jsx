@@ -2,10 +2,9 @@ import React from "react";
 import Link from "next/link";
 import ShinyText from "@/components/ShinyText";
 import {
-  IconArrowRight,
-  IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTelegram,
+  IconPhone,
 } from "@tabler/icons-react";
 import Magnet from "@/components/bits/Magnet";
 import BmLogo from "@/assets/BmLogo";
@@ -55,18 +54,19 @@ const MainHero = () => {
               Boborahim Mashrab xususiy maktabi zamonaviy sharoitlar bilan
               ta'minlangan ixtisoslashtirilgan maktab bo'lib, 1-sinfdan
               11-sinfgacha bo'lgan o'quvchilar taxsil oladi. Ixtisoslik
-              yo'nalishlari Matematika, Informatika (I.T), Ingliz-tili,
-              Rus-tili, Kimyo hamda Biologiya fanlari bo'lib darslar o'zbek
-              tilida olib boriladi
+              yo'nalishlari Matematika, Informatika (I.T), Ingliz tili, Rus
+              tili, Kimyo hamda Biologiya fanlari bo'lib darslar o'zbek tilida
+              olib boriladi.
             </p>
             <article className="flex justify-center lg:justify-start">
               <Link
-                href={""}
+                href={"tel:+998907522500"}
                 data-aos-duration="2000"
                 data-aos="fade-down-right"
+                className="border border-slate-900 mt-8 rounded-full hover:scale-105 duration-300 active:scale-95"
               >
-                <ShinyText className="  border border-gray-600 text-lg p-2 px-4 flex items-center gap-2 mt-8 hover:scale-105 duration-300">
-                  Bog'lanish <IconArrowRight size={17} />
+                <ShinyText speed={2} className=" text-lg p-2 px-6 flex items-center gap-2 ">
+                  <IconPhone size={18} color="#aaa" /> Bog'lanish{" "}
                 </ShinyText>
               </Link>
             </article>
