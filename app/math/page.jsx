@@ -9,13 +9,11 @@ import React, { useState, useEffect } from "react";
 const page = () => {
   const [posts, setPosts] = useState([]);
   const [classData] = useState({
-    5: 30,
-    6: 30,
+    5: 36,
+    6: 36,
     7: 30,
-    8: 25,
-    9: 20,
-    10: 10,
-    11: 10,
+    8: 30,
+    9: 30,
   });
 
   // 🔁 fetchPosts ni tashqariga olib chiqamiz
@@ -43,6 +41,19 @@ const page = () => {
     };
 
     try {
+      if (data.full_name.length < 3) {
+        alert("Ismni to'liq kiriting!");
+        return;
+      }
+      if (!data.group) {
+        alert("Sinfni tanlang!");
+        return;
+      }
+      if (!data.phone_number || data.phone_number.length < 13) {
+        alert("Telefon raqamini kiriting!");
+        return;
+      }
+
       let res = await axios.post(
         "https://bmmatholim.pythonanywhere.com/contact/",
         data
@@ -98,7 +109,7 @@ const page = () => {
             </div>
             <div className="mt-5">
               <label htmlFor="name" className="text-white text-sm font-light ">
-                Maktab
+                Maktabingiz
               </label>
               <input
                 name="school"
@@ -109,7 +120,7 @@ const page = () => {
             </div>
             <div className="mt-5">
               <label htmlFor="name" className="text-white text-sm font-light ">
-                Sinf
+                Sinfingiz
               </label>
               <select
                 name="class"
@@ -139,7 +150,7 @@ const page = () => {
             </div>
             <div className="mt-5">
               <label htmlFor="name" className="text-white text-sm font-light ">
-                Telefon raqam
+                Telefon raqamingiz
               </label>
               <input
                 name="phone"
@@ -150,7 +161,7 @@ const page = () => {
                 className="p-2 px-4 w-full mt-1  bg-transparent border border-slate-800 rounded text-sm  text-white autofill:bg-transparent "
               />
             </div>
-            <button className="backdrop-blur-3xl  border border-slate-700 p-3 rounded-md mt-10 w-full text-white active:scale-95 duration-300">
+            <button className="backdrop-blur-3xl   border border-slate-700 p-3 rounded-md mt-10 w-full text-white hover:scale-95 active:scale-95 duration-300">
               Ro'yhatdan o'tish
             </button>
           </form>
