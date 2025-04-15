@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 
 const page = () => {
   const [posts, setPosts] = useState([]);
+  const [isActive, setIsActive] = useState(true); // true -> hisoblayapti, false -> tugagan
   const [classData] = useState({
     5: 36,
     6: 36,
@@ -85,7 +86,7 @@ const page = () => {
             Matematika Musobaqasi
           </BubbleText>
 
-          <CountdownTimer />
+          <CountdownTimer isActive={isActive} setIsActive={setIsActive} />
         </div>
 
         <article className="mt-10 grid grid-cols-12 gap-5 md:gap-10 lg:gap-10 xl:gap-2 2xl:items-center pb-10 lg:pb-2">
@@ -161,8 +162,11 @@ const page = () => {
                 className="p-2 px-4 w-full mt-1  bg-transparent border border-slate-800 rounded text-sm  text-white autofill:bg-transparent "
               />
             </div>
-            <button className="backdrop-blur-3xl   border border-slate-700 p-3 rounded-md mt-10 w-full text-white hover:scale-95 active:scale-95 duration-300">
-              Ro'yhatdan o'tish
+            <button
+              disabled={!isActive}
+              className="backdrop-blur-3xl   border border-slate-700 p-3 rounded-md mt-10 w-full text-white hover:scale-95 active:scale-95 duration-300"
+            >
+              {isActive ? "Ro'yhatdan o'tish" : "vaqt tugadi"}
             </button>
           </form>
           <div className="hidden lg:flex items-center justify-center lg:col-span-4 2xl:col-span-6 ">
