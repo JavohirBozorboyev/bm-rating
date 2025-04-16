@@ -1,77 +1,80 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { DateTime, Duration } from "luxon";
 
-const CountdownTimer = ({
-  setIsActive, // Tugaganida false qilib qo'yamiz
-  isActive, // true -> hisoblayapti, false -> tugagan
-}) => {
-  const getEndTime = () => {
-    return new Date("2025-04-19T09:00:00"); // Maqsadli vaqt
-  };
+const CountdownTimer = ({ setIsActive }) => {
+  // 🎯 Tugash vaqti (UTC+5 bo‘yicha 2025-04-19 09:00:00)
+  const targetTime = DateTime.fromISO("2025-04-19T09:00:00", {
+    zone: "Asia/Tashkent", // yoki sizning mintaqangiz
+  });
 
   const calculateTimeLeft = () => {
-    const endTime = getEndTime();
-    const difference = +endTime - +new Date();
+    const now = DateTime.now().setZone("Asia/Tashkent");
+    const diff = targetTime
+      .diff(now, ["days", "hours", "minutes", "seconds"])
+      .toObject();
 
-    if (difference <= 0) {
+    if (diff.seconds <= 0) {
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
+      days: Math.floor(diff.days),
+      hours: Math.floor(diff.hours),
+      minutes: Math.floor(diff.minutes),
+      seconds: Math.floor(diff.seconds),
     };
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
       const updatedTime = calculateTimeLeft();
       setTimeLeft(updatedTime);
 
-      // Agar vaqt tugagan bo‘lsa
-      if (
+      const isZero =
         updatedTime.days === 0 &&
         updatedTime.hours === 0 &&
         updatedTime.minutes === 0 &&
-        updatedTime.seconds === 0
-      ) {
+        updatedTime.seconds === 0;
+
+      if (isZero) {
+        setIsRunning(false);
         setIsActive(false);
-        clearInterval(timer); // Ortiqcha ishlashning oldini oladi
+        clearInterval(timer);
       }
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [setIsActive]);
 
   return (
     <div>
-      {isActive ? (
-        <div className="flex gap-4 lg:justify-center text-3xl mt-5  md:text-5xl 2xl:text-5xl font-extrabold select-none">
+      {isRunning ? (
+        <div className="flex gap-4 lg:justify-center text-3xl mt-5 md:text-5xl font-extrabold select-none">
           <div>
-            <span className="text-white ">{timeLeft.days}</span>{" "}
+            <span className="text-white">{timeLeft.days}</span>{" "}
             <span className="text-gray-500 font-medium text-base lg:text-2xl">
               kun
             </span>
           </div>
           <div>
-            <span className="text-white ">{timeLeft.hours}</span>{" "}
+            <span className="text-white">{timeLeft.hours}</span>{" "}
             <span className="text-gray-500 font-medium text-base lg:text-2xl">
               soat
             </span>
           </div>
           <div>
-            <span className="text-white ">{timeLeft.minutes}</span>{" "}
+            <span className="text-white">{timeLeft.minutes}</span>{" "}
             <span className="text-gray-500 font-medium text-base lg:text-2xl">
               daqiqa
             </span>
           </div>
           <div>
-            <span className="text-white ">{timeLeft.seconds}</span>{" "}
+            <span className="text-white">{timeLeft.seconds}</span>{" "}
             <span className="text-gray-500 font-medium text-base lg:text-2xl">
               soniya
             </span>
