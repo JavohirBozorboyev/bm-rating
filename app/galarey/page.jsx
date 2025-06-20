@@ -24,8 +24,8 @@ const Cards = () => {
     <div className="absolute inset-0 z-10" ref={containerRef}>
       <Card
         containerRef={containerRef}
-        src={"/IMG_2262.JPG"}
-        alt="Example image"
+        src={"/img1.jpg"}
+        alt="1"
         rotate="6deg"
         top="20%"
         left="25%"
@@ -33,7 +33,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_2442.JPG"}
+        src={"/img2.jpg"}
         alt="Example image"
         rotate="12deg"
         top="45%"
@@ -42,7 +42,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_2522.JPG"}
+        src={"/img3.jpg"}
         alt="Example image"
         rotate="-6deg"
         top="20%"
@@ -51,16 +51,16 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_3549.JPG"}
+        src={"/img4.jpg"}
         alt="Example image"
         rotate="8deg"
         top="50%"
         left="40%"
-        className="w-48 md:w-96"
+        className="w-48 md:w-60"
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_3563.JPG"}
+        src={"/img5.jpg"}
         alt="Example image"
         rotate="18deg"
         top="20%"
@@ -69,16 +69,16 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_3685.JPG"}
+        src={"/img6.jpg"}
         alt="Example image"
         rotate="-3deg"
         top="50%"
         left="20%"
-        className="w-44 md:w-60"
+        className="w-44 md:w-96"
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_8188.JPG"}
+        src={"/img7.jpg"}
         alt="Example image"
         rotate="-3deg"
         top="35%"
@@ -87,7 +87,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src={"/IMG_8339.JPG"}
+        src={"/img8.jpg"}
         alt="Example image"
         rotate="-3deg"
         top="35%"
