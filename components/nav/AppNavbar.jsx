@@ -9,6 +9,10 @@ const LinkData = [
     link: "/",
   },
   {
+    title: "Galareya",
+    link: "/galarey",
+  },
+  {
     title: "Matematika Musobaqasi",
     link: "/math",
   },
@@ -67,24 +71,17 @@ const AppNavbar = () => {
           <div className="flex items-center ">
             <div className="hidden md:block ">
               <div className="flex items-center space-x-8">
-                <Link
-                  href="/"
-                  className="text-sm text-gray-300 hover:text-white"
-                >
-                  Asosiy Sahifa
-                </Link>
-                {/* <Link
-                  href="/rating"
-                  className="text-sm text-gray-300 hover:text-white"
-                >
-                  Reyting
-                </Link> */}
-                <Link
-                  href="/math"
-                  className="text-sm text-gray-300 hover:text-white"
-                >
-                  Matematika Musobaqasi
-                </Link>
+                {LinkData.map((item, id) => {
+                  return (
+                    <Link
+                      key={id}
+                      href={item.link}
+                      className="text-sm text-gray-300 hover:text-white"
+                    >
+                      {item.title}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
