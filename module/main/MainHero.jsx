@@ -38,7 +38,7 @@ const MainHero = () => {
             >
               <BubbleText
                 className={
-                  " text-2xl mt-4 xl:text-6xl text-center lg:text-left text-gray-300 font-extrabold"
+                  " text-2xl mt-4 xl:text-6xl text-center lg:text-left text-gray-300 font-extrabold uppercase"
                 }
               >
                 Xususiy Maktabi
